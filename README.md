@@ -3,7 +3,7 @@ A simple Bayesian package to calculate the repeating burst rate based on the Wei
 
 ## References
 
-If you would like to use this code to study the non-Possionian repeating FRB , please cite the paper [Luo et al. 2020, Nature, 586, 693](https://ui.adsabs.harvard.edu/abs/2020Natur.586..693L/abstract).
+If you would like to use this code to study the non-Possionian process of repeating FRBs, please cite the paper [Luo et al. 2020, Nature, 586, 693](https://ui.adsabs.harvard.edu/abs/2020Natur.586..693L/abstract).
 
 ## Mathematical Basis
 
