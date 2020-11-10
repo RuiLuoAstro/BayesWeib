@@ -15,7 +15,7 @@ Python (3.6.x), PyMultiNest (see https://github.com/JohannesBuchner/PyMultiNest 
 
 ## Usage
 
-Run by ``` ./run_nest.sh ``` 
+Run it by ``` ./run_nest.sh ``` 
 
 **Notes: Sampling is very fast, no need to run it in parallel on any computer cluster. The posterior outputs will be saved on the directory ```./nest_out/```**
 
