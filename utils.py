@@ -91,7 +91,7 @@ class StatDis():
         Args:
             delta: Time interval of adjacent events in untis of sec.
             r: Event rate in units of hr^{-1},
-            k: The shape parameter of Weibull distribution, for example, for k=1, Weibull reduces to exponential distribution that follow the Poisson process.
+            k: The shape parameter of Weibull distribution, for example, for k=1, the Weibull distribution reduces to exponential one that follow the Poissonian process.
         '''
         par_a = np.log(k)+(k-1)*np.log(delta)+k*np.log(r)+sp.gammaln(1+1./k)
         par_b = np.power(delta*r*sp.gamma(1+1./k), k)
@@ -109,8 +109,8 @@ class StatDis():
         '''
         Probability of N events detected in tobs observing time.
         Args:
-            ts1: Time interval from the started time to the first event
-            tne: Time interval from the last event to the ended time
+            ts1: Time interval from the start time to the first event
+            tne: Time interval from the last event to the end time
         '''
         w = self.Weibull(delta, r, k)
         res = r*self.CDF(ts1, r, k)*self.CDF(tne, r, k)*np.prod(w)
@@ -128,7 +128,7 @@ class StatDis():
 
     def ProbN0(self, tobs, r, k):
         '''
-        Probability of one event detected in tobs observing time.
+        Probability of zero event detected in tobs observing time.
         Args:
             tobs: A single observation duration
         '''
