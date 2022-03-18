@@ -20,7 +20,7 @@ def lnlik(vpar):
         loglik = np.log(p1) + np.log(p2) + np.log(p3) + np.log(p4)
         return loglik
     except:
-        print 'Numerical error: @', vpar
+        print('Numerical error: @', vpar)
         return -1e99
 
 def prior(cube, ndim, nparams):
@@ -91,14 +91,14 @@ if __name__ == '__main__':
     vparb=np.array([1, 1])
     vpar_range=np.dstack((vpara.transpose(),vparb.transpose()))[0,:,:]
 
-    print '-----------------par range------------------'
-    print vpar_range
-    print 
-    print '-------------marginal likelihood------------'
-    print loglikfunc(vpara, len(vpara),len(vpara))
-    print 
-    print "The Nest sampler is running ..."
-    print '-------------sampling process---------------'
+    print('-----------------par range------------------')
+    print(vpar_range)
+    print() 
+    print('-------------marginal likelihood------------')
+    print(loglikfunc(vpara, len(vpara),len(vpara)))
+    print()
+    print("The Nest sampler is running ...")
+    print('-------------sampling process---------------')
     # run MultiNest
     pymultinest.run(loglikfunc, prior, len(vpara),
                     importance_nested_sampling = False,

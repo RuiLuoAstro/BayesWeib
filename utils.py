@@ -66,7 +66,7 @@ class MathFunc():
             else:
                 res = np.vstack( (res, vpar[vy <= fv,:]))
                 nt, m = res.shape
-            print nt
+            print(nt)
         return res
 
 class StatDis():
